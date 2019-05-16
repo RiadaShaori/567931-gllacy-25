@@ -2,11 +2,96 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Глейси</title>
   </head>
   <body>
+    <header class="main-header">
+      <nav class="main navigation">
+        <a class="main-header-logo">
+          <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
+        </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+        <ul class="site-navigation">
+          <li><a href="catalog.html">Каталог</a></li> <!--В каталоге есть выпадающее меню, которое на данном этапе я не размечаю-->
+          <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
+          <li><a href="about-company.html">О Компании</a></li>
+        </ul>
+
+        <button class="searching-button"></button> <!--Также тут будет изображение Лупы поисковика и выпадающее окно поисковика-->
+
+        <ul class="user-navigation">
+          <li class="login-link">Вход</li> <!--Будет выпадающая форма-->
+          <li class="basket">Пусто</li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <!--Отсутствуют блоки, которые будут интегрированы позже, согласно заданию-->
+
+      <h1 class="visually-hidden">«Gllacy-Shop»</h1>
+
+      <section class="description">
+        <p class="shop-description"> Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+
+        <ul>
+          <li class="description-equipment">Все наше мороженое изготавливается на собственном производстве,
+            с использованием современного оборудования и проверенных временем технологий.</li>
+          <li class="description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+            Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li class="description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+            с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+            который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+        </ul>
+      </section>
+
+      <article class="new-in-blog">
+        <h1 class="blog-news">Новое в нашем блоге</h1>
+
+        <a href="#" class="table setting">10 способов сервировки фруктовых щербетов к столу</a>
+      </article>
+
+      <section class="subscription">
+        <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+          что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+
+        <!--Тут будет форма-->
+      </section>
+
+      <section class="contacts">
+        <img class="map" src="img/map.jpeg" alt="Карта проезда к офису по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <img class="location indicator" src="img/indicator.svg" alt="Наше месторасположение">
+
+        <!--Упс этого пока размечать не нужно было, но я уже начала, так что оставлю:)-->
+        <!--Также тут будет форма обратной связи-->
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-button" href="#" aria-label="Твитер"></a></li>
+          <li><a class="social-button" href="#" aria-label="Инстаграм"></a></li>
+          <li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
+          <li><a class="social-button" href="#" aria-label="Вконтакте"></a></li>
+        </ul>
+      </div>
+
+      <ul class="add-company-info">
+        <li><a class="for-suppliers" href="#">Для поставщиков</a></li>
+        <li><a href="#"></a>О производстве</li>
+        <li><a href="#"></a>Наши документы</li>
+        <li><a href="#">Экологические стандарты</a></li>
+      </ul>
+
+      <img src="htmlacademy-logo.svg" alt="Логотип HTML-Academy">
+      <p class="footer-copyright">
+        Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a> <!--не знаю как поставить знак "copyright"-->2019
+      </p>
+
+    </footer>
 
   </body>
 </html>
