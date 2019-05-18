@@ -6,25 +6,27 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main navigation">
-        <a class="main-header-logo">
-          <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
-        </a>
 
+      <a class="main-logo">
+        <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
+      </a>
+
+      <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li> <!--В каталоге есть выпадающее меню, которое на данном этапе я не размечаю-->
           <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
           <li><a href="about-company.html">О Компании</a></li>
         </ul>
+      </nav>
 
+      <div class="user-navigation">
         <button class="searching-button"></button> <!--Также тут будет изображение Лупы поисковика и выпадающее окно поисковика-->
 
-        <ul class="user-navigation">
+        <ul class="user-nav">
           <li class="login-link">Вход</li> <!--Будет выпадающая форма-->
           <li class="basket">Пусто</li>
         </ul>
-
-      </nav>
+      </div>
     </header>
 
     <main class="main-container">
@@ -36,33 +38,40 @@
         <p class="shop-description"> Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
         <ul>
-          <li class="description-equipment">Все наше мороженое изготавливается на собственном производстве,
+          <li class="description-text description-equipment">Все наше мороженое изготавливается на собственном производстве,
             с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+
+          <li class="description-text description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+              с которыми нас связывает долговременное сотрудничество.</li>
+
+          <li class="description-text description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
             Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-          <li class="description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
-            с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+
+          <li class="description-text description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
             который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
 
-      <article class="new-in-blog">
-        <h1 class="blog-news">Новое в нашем блоге</h1>
+      <div class="news-sub">
+        <article class="new-in-blog">
+          <h2 class="blog-news">Новое в нашем блоге</h2>
 
-        <a href="#" class="table setting">10 способов сервировки фруктовых щербетов к столу</a>
-      </article>
+          <a href="#" class="table-setting">10 способов сервировки фруктовых щербетов к столу</a>
+        </article>
 
-      <section class="subscription">
-        <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-          что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <section class="subscription">
+          <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+            что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-        <!--Тут будет форма-->
-      </section>
+          <!--Тут будет форма-->
+        </section>
+      </div>
 
       <section class="contacts">
-        <img class="map" src="img/map.jpeg" alt="Карта проезда к офису по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        <img class="location indicator" src="img/indicator.svg" alt="Наше месторасположение">
+        <div class="map">
+          <img class="location-indicator" src="img/indicator.png" alt="Наше месторасположение" width="218" height="142">
+        </div>
+
 
         <!--Упс этого пока размечать не нужно было, но я уже начала, так что оставлю:)-->
         <!--Также тут будет форма обратной связи-->
@@ -70,27 +79,25 @@
     </main>
 
     <footer class="main-footer">
-      <div class="footer-social">
-        <ul>
-          <li><a class="social-button" href="#" aria-label="Твитер"></a></li>
-          <li><a class="social-button" href="#" aria-label="Инстаграм"></a></li>
-          <li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
-          <li><a class="social-button" href="#" aria-label="Вконтакте"></a></li>
-        </ul>
-      </div>
-
-      <ul class="add-company-info">
-        <li><a class="for-suppliers" href="#">Для поставщиков</a></li>
-        <li><a href="#"></a>О производстве</li>
-        <li><a href="#"></a>Наши документы</li>
-        <li><a href="#">Экологические стандарты</a></li>
+      <ul class="social">
+          <li class="social-icon"><a class="social-link icon-twitter" href="#" aria-label="Твитер"></a></li>
+          <li class="social-icon"><a class="social-link icon-instagram" href="#" aria-label="Инстаграм"></a></li>
+          <li class="social-icon"><a class="social-link icon-facebook" href="#" aria-label="Фейсбук"></a></li>
+          <li class="social-icon"><a class="social-link icon-vkontakte" href="#" aria-label="Вконтакте"></a></li>
       </ul>
 
-      <img src="htmlacademy-logo.svg" alt="Логотип HTML-Academy">
-      <p class="footer-copyright">
-        Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a> <!--не знаю как поставить знак "copyright"-->2019
-      </p>
+      <ul class="footer-menu">
+        <li class="footer-menu-item"><a class="for-suppliers" href="#" active>Для поставщиков</a></li>
+        <li class="footer-menu-item"><a class="production" href="#"></a>О производстве</li>
+        <li class="footer-menu-item"><a class="documents" href="#"></a>Наши документы</li>
+        <li class="footer-menu-item"><a class="standarts" href="#">Экологические стандарты</a></li>
+      </ul>
 
+      <div class="development">
+        <img src="img/htmlacademy-logo.svg" alt="Логотип HTML-Academy" width="114" height="39">
+
+          <span>Сделано в <a class="developer" href="https://htmlacademy.ru">HTML Academy</a></span> <!--не знаю как поставить знак "copyright"-->2019
+      </div>
     </footer>
 
   </body>
