@@ -13,25 +13,82 @@
 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li> <!--В каталоге есть выпадающее меню, которое на данном этапе я не размечаю-->
+          <li><a href="catalog.html">Каталог</a>
+              <ul class="catalog-submenu">
+                <li class="catalog-submenu__new"><a href="catalog-new-items.html">Новинки</a></li>
+                <li class="catalog-submenu__creamy"><a href="catalog-creamy.html">Сливочное</a></li>
+                <li class="catalog-submenu__sherbet"><a href="catalog-sherbet.html">Щербеты</a></li>
+                <li class="catalog-submenu__fruitice"><a href="catalog-fruitice.html">Фруктовый лед</a></li>
+                <li class="catalog-submenu__melorin"><a href="catalog-melorin.html">Мелорин</a></li>
+              </ul>
+          </li>
           <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
           <li><a href="about-company.html">О Компании</a></li>
         </ul>
       </nav>
 
       <div class="user-navigation">
-        <button class="searching-button"></button> <!--Также тут будет изображение Лупы поисковика и выпадающее окно поисковика-->
+
+        <button class="searching__button">
+          <form class="saerching__form" action="/echo" method="post">
+            <label class="searching__field">
+              <input type="search" name="search" placeholder="Что ищем?">
+            </label>
+          </form>
+        </button>
 
         <ul class="user-nav">
-          <li class="login-link">Вход</li> <!--Будет выпадающая форма-->
-          <li class="basket">Пусто</li>
+          <li class="login">Вход
+            <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+
+              <label class="login-form__email">
+                <span class="visually-hidden">Электронная почта</span>
+                <input type="email" placeholder="Электронная почта">
+              </label>
+
+              <label class="login-form__password">
+                <span class="visually-hidden">Пароль</span>
+                <input type="password" placeholder="Пароль">
+              </label>
+
+              <button class="button"  type="submit">Войти </button>    <!--Так было в примере Барбершоп, почему нельзя использовать input type="buttom"?-->
+              <a class="login-form__restore" href="#">Забыли пароль?</a>
+              <a class="login-form__newregistration" href="#">Новая регистрация</a>
+            </form>
+          </li>
+
+          <li class="basket">2 товара
+            <div class="basket-non-empty">
+              <table class="basket-with-products">
+                <tr>
+                  <td>&#10006;</td>
+                  <td><img src="img/product-1.jpg" width="33px" height="33px"</td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг х <span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+
+                <tr>
+                  <td>&#10006;</td>
+                  <td><img src="img/product-3.jpg" width="33px" height="33px"</td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5 кг х <span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+              </table>
+              <hr>
+
+              <span class="basket__finalprice">Итого:750 руб.</span>
+
+              <button class="button"  type="submit">Оформить заказ</button>
+            </div>
+          </li>
         </ul>
       </div>
     </header>
 
     <main class="catalog-container">
       <h1 class="visually-hidden">Каталог мороженого</h1>
-
 
       <ul class="breadcrumbs">
         <li><a href="index.html"> Главная</a></li>
@@ -40,11 +97,81 @@
       </ul>
 
       <h2 class="page-title">Сливочное мороженое</h2>
-      <!--Тут будут формы-->
+
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+
+        <fieldset class="filter-sorting">
+          <span class="filter-option">Сортировка:</span>
+          <select name="sort">
+            <option value="popularity">по популярности</option>
+            <option value="cost">по стоимости</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="filter-cost">
+          <label class="filter-cost__range">
+            <span class="filter-option">Цена: 100 руб. - 500 руб.</span>
+            <input type="range" min="100руб." max="500руб.">
+          </lable>
+        </fieldset>
+
+        <fieldset class="fat">
+          <legend class="fat-filter__title">Жирность:</legend>
+
+          <label class="fat-filter">
+            <input class="fat-filter__input" type="radio" name="fieldradio">
+            <span class="fat-filter__text">0 %</span>
+          </label>
+
+          <label class="fat-filter">
+            <input class="fat-filter__input" type="radio" name="fieldradio" checked>
+            <span class="fat-filter__text">до 10 %</span>
+          </label>
+
+          <label class="fat-filter">
+            <input class="fat-filter__input" type="radio" name="fieldradio">
+            <span class="fat-filter__text">до 30 %</span>
+          </label>
+
+          <label class="fat-filter">
+            <input class="fat-filter__input" type="radio" name="fieldradio">
+            <span class="fat-filter__text">выше 30 %</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="filter-additions">
+          <legend class="filter-additions__title">Наполнители:</legend>
+
+          <label class="additions-checkbox">
+            <input class="additions-checkbox__input" type="checkbox" name="chocolate" checked>
+            <span class="additions-checkbox__text">шоколадные</span>
+          </label>
+
+          <label class="additions-checkbox">
+            <input class="additions-checkbox__input" type="checkbox" name="sugar" checked>
+            <span class="additions-checkbox__text">сахарные присыпки</span>
+          </label>
+
+          <label class="additions-checkbox">
+            <input class="additions-checkbox__input" type="checkbox" name="fruit">
+            <span class="additions-checkbox__text">фрукты</span>
+          </label>
+
+          <label class="additions-checkbox">
+            <input class="additions-checkbox__input" type="checkbox" name="syrup">
+            <span class="additions-checkbox__text">сиропы</span>
+          </label>
+
+          <label class="additions-checkbox">
+            <input class="additions-checkbox__input" type="checkbox" name="jam">
+            <span class="additions-checkbox__text">джемы</span>
+          </label>
+        </fieldset>
+
+        <button class="filter-button"  type="submit">Применить</button>
+      </form>
 
       <section class="catalog">
-
-
         <ul class="catalog-list">
 
           <li class="catalog-item">
