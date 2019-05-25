@@ -14,13 +14,13 @@
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
-              <ul class="catalog-submenu">
-                <li class="catalog-submenu__new"><a href="catalog-new-items.html">Новинки</a></li>
-                <li class="catalog-submenu__creamy"><a href="catalog-creamy.html">Сливочное</a></li>
-                <li class="catalog-submenu__sherbet"><a href="catalog-sherbet.html">Щербеты</a></li>
-                <li class="catalog-submenu__fruitice"><a href="catalog-fruitice.html">Фруктовый лед</a></li>
-                <li class="catalog-submenu__melorin"><a href="catalog-melorin.html">Мелорин</a></li>
-              </ul>
+            <ul class="catalog-submenu">
+              <li class="submenu-item submenu-item-title__new"><a href="#">Новинки</a></li>
+              <li class="submenu-item"><a href="#">Сливочное</a></li>
+              <li class="submenu-item"><a href="#">Щербеты</a></li>
+              <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+              <li class="submenu-item"><a href="#">Мелорин</a></li>
+            </ul>
           </li>
           <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
           <li><a href="about-company.html">О Компании</a></li>
@@ -29,13 +29,15 @@
 
       <div class="user-navigation">
 
-        <button class="searching__button">
-          <form class="saerching__form" action="/echo" method="post">
-            <label class="searching__field">
-              <input type="search" name="search" placeholder="Что ищем?">
-            </label>
-          </form>
-        </button>
+        <div class="user-navigation">
+          <div class="searching">
+            <button class="searching__button"></button>
+            <form class="saerching__form" action="/echo" method="post">
+              <label class="searching__field">
+                <input type="search" name="search" placeholder="Что ищем?">
+              </label>
+            </form>
+          </div>
 
         <ul class="user-nav">
           <li class="login">Вход
@@ -51,17 +53,19 @@
                 <input type="password" placeholder="Пароль">
               </label>
 
-              <button class="button"  type="submit">Войти </button>    <!--Так было в примере Барбершоп, почему нельзя использовать input type="buttom"?-->
-              <a class="login-form__restore" href="#">Забыли пароль?</a>
-              <a class="login-form__newregistration" href="#">Новая регистрация</a>
+              <button class="button"  type="submit">Войти </button>
+              <div class="login-form__restore">
+                <a class="login-form__link" href="#">Забыли пароль?</a>
+                <a class="login-form__link" href="#">Новая регистрация</a>
+              </div>
             </form>
           </li>
 
-          <li class="basket">2 товара
+          <li class="basket"><a href="#">2 товара</a>
             <div class="basket-non-empty">
               <table class="basket-with-products">
                 <tr>
-                  <td>&#10006;</td>
+                  <td><button>&#10006;</td>
                   <td><img src="img/product-1.jpg" width="33px" height="33px"</td>
                   <td>Пломбир с апельсиновым джемом</td>
                   <td>1,5 кг х <span>200 руб.</span></td>
@@ -76,7 +80,6 @@
                   <td>450 руб.</td>
                 </tr>
               </table>
-              <hr>
 
               <span class="basket__finalprice">Итого:750 руб.</span>
 
@@ -101,19 +104,21 @@
       <form class="filter" method="get" action="https://echo.htmlacademy.ru">
 
         <fieldset class="filter-sorting">
-          <span class="filter-option">Сортировка:</span>
+          <legend class="filter-option">Сортировка:</legend>
           <select name="sort">
             <option value="popularity">по популярности</option>
             <option value="cost">по стоимости</option>
           </select>
         </fieldset>
 
-        <fieldset class="filter-cost">
-          <label class="filter-cost__range">
-            <span class="filter-option">Цена: 100 руб. - 500 руб.</span>
-            <input type="range" min="100руб." max="500руб.">
-          </lable>
-        </fieldset>
+        <div class="filter-cost">
+          <span class="filter-option">Цена: 100 руб. - 500 руб.</span>
+          <div class="filter-cost__range">
+            <div class="filter-line"></div>
+            <div class="filter-cursor__min"></div>
+            <div class="filter-cursor__min"></div>
+          </div>
+        </div>
 
         <fieldset class="fat">
           <legend class="fat-filter__title">Жирность:</legend>

@@ -15,11 +15,11 @@
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
               <ul class="catalog-submenu">
-                <li class="catalog-submenu__new"><a href="catalog-new-items.html">Новинки</a></li>
-                <li class="catalog-submenu__creamy"><a href="catalog-creamy.html">Сливочное</a></li>
-                <li class="catalog-submenu__sherbet"><a href="catalog-sherbet.html">Щербеты</a></li>
-                <li class="catalog-submenu__fruitice"><a href="catalog-fruitice.html">Фруктовый лед</a></li>
-                <li class="catalog-submenu__melorin"><a href="catalog-melorin.html">Мелорин</a></li>
+                <li class="submenu-item submenu-item-title__new"><a href="catalog-new-items.html">Новинки</a></li>
+                <li class="submenu-item"><a href="catalog-creamy.html">Сливочное</a></li>
+                <li class="submenu-item"><a href="catalog-sherbet.html">Щербеты</a></li>
+                <li class="submenu-item"><a href="catalog-fruitice.html">Фруктовый лед</a></li>
+                <li class="submenu-item"><a href="catalog-melorin.html">Мелорин</a></li>
               </ul>
           </li>
           <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
@@ -28,14 +28,15 @@
       </nav>
 
       <div class="user-navigation">
-
-        <button class="searching__button">
+        <div class="searching">
+          <button class="searching__button"></button>
           <form class="saerching__form" action="/echo" method="post">
             <label class="searching__field">
               <input type="search" name="search" placeholder="Что ищем?">
             </label>
           </form>
-        </button>
+        </div>
+
 
         <ul class="user-nav">
           <li class="login">Вход
@@ -51,9 +52,11 @@
                 <input type="password" placeholder="Пароль">
               </label>
 
-              <button class="button"  type="submit">Войти</button>    <!--Так было в примере Барбершоп, почему нельзя использовать input type="buttom"?-->
-              <a class="login-form__restore" href="#">Забыли пароль?</a>
-              <a class="login-form__newregistration" href="#">Новая регистрация</a>
+              <button class="button"  type="submit">Войти</button>
+              <div class="login-form__restore">
+                <a class="login-form__link" href="#">Забыли пароль?</a>
+                <a class="login-form__link" href="#">Новая регистрация</a>
+              </div>
             </form>
           </li>
           <li class="basket">Пусто</li>
@@ -96,7 +99,7 @@
             что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
           <form class="subscription__form" action="http://echo.htmlacademy.ru" method="post">
-            <label class="subscription__form__email">
+            <label class="subscription__email">
               <span class="visually-hidden">Электронная почта</span>
               <input type="email" placeholder="Электронная почта">
             </label>
@@ -116,34 +119,60 @@
             и офлайн-магазина:<br>
             <span class="contacts-field__address_bold">ул. Большая Конюшенная<br>
                19/8, Санкт-Петербург</span>
-            <br>
+
             Для заказов по телефону:<br>
-            <span class="contacts-field__address_bold">8 812 450-25-25</span>
+            <a class="contact-phone" href="tel:88124502525">8 812 450-25-25</a>
             (с 10 до 20 ежедневно)
           </p>
+          <a href="#" class="feedback">Форма обратной связи</a>
+        </div>
+      </section>
+    </main>
 
-          <button class="feedback">Форма обратной связи
-            <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
-              <fieldset class="feedback-form__fieldset">
-                <legend class="feedback-form__legend">Мы обязательно вам ответим!</legend>
+            <footer class="main-footer">
+              <ul class="social">
+                  <li class="social-icon"><a class="social-link icon-twitter" href="#" aria-label="Твитер"></a></li>
+                  <li class="social-icon"><a class="social-link icon-instagram" href="#" aria-label="Инстаграм"></a></li>
+                  <li class="social-icon"><a class="social-link icon-facebook" href="#" aria-label="Фейсбук"></a></li>
+                  <li class="social-icon"><a class="social-link icon-vkontakte" href="#" aria-label="Вконтакте"></a></li>
+              </ul>
 
-                <label class="feedback-username">
-                  <span class="visually-hidden">Имя</span>
-                  <input class="feedback-username__input" type="text" placeholder="Как вас зовут?">
-                </label>
+              <ul class="footer-menu">
+                <li class="footer-menu-item"><a class="for-suppliers" href="#" active>Для поставщиков</a></li>
+                <li class="footer-menu-item"><a class="production" href="#"></a>О производстве</li>
+                <li class="footer-menu-item"><a class="documents" href="#"></a>Наши документы</li>
+                <li class="footer-menu-item"><a class="standarts" href="#">Экологические стандарты</a></li>
+              </ul>
 
-                <label class="feedback-usermail">
-                  <span class="visually-hidden">email:</span>
-                  <input class="feedback-usermail__input" type="email" placeholder="Ваша почта для ответа?">
-                </label>
+              <div class="development">
+                <img src="img/htmlacademy-logo.svg" alt="Логотип HTML-Academy" width="114" height="39">
 
-                <label class="feedback-text">
-                  <span class="visually-hidden">Текст обращения</span>
-                  <input class="feedback-text__input" type="text" placeholder="Напишите что-нибудь">
-                </label>
+                  <span>Сделано в <a class="developer" href="https://htmlacademy.ru">HTML Academy</a></span> <!--не знаю как поставить знак "copyright"-->2019
+              </div>
+            </footer>
+
+
+              <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+                <fieldset class="feedback-form__fieldset">
+                  <legend class="feedback-form__legend">Мы обязательно вам ответим!</legend>
+
+                  <label class="feedback-username">
+                    <span class="visually-hidden">Имя</span>
+                    <input class="feedback-username__input" type="text" placeholder="Как вас зовут?">
+                  </label>
+
+                  <label class="feedback-usermail">
+                    <span class="visually-hidden">email:</span>
+                    <input class="feedback-usermail__input" type="email" placeholder="Ваша почта для ответа?">
+                  </label>
+
+                  <label class="feedback-text">
+                    <span class="visually-hidden">Текст обращения</span>
+                    <textarea class="feedback-text__input" name="comment" id="comment-field" rows="10">Напишите что-нибудь</textarea>
+                  </label>
+                </fieldset>
 
                 <button class="button"  type="submit">Отправить</button>
-              </fieldset>
-            </form>
-          </button>
+              </form>
+  </body>
 </html>
