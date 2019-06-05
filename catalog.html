@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -15,7 +18,7 @@
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
             <ul class="catalog-submenu">
-              <li class="submenu-item submenu-item-title__new"><a href="#">Новинки</a></li>
+              <li class="submenu-item submenu-item-title"><a href="#">Новинки</a></li>
               <li class="submenu-item"><a href="#">Сливочное</a></li>
               <li class="submenu-item"><a href="#">Щербеты</a></li>
               <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
@@ -31,9 +34,9 @@
 
         <div class="user-navigation">
           <div class="searching">
-            <button class="searching__button"></button>
-            <form class="saerching__form" action="/echo" method="post">
-              <label class="searching__field">
+            <button class="searching-button"></button>
+            <form class="saerching-form" action="/echo" method="post">
+              <label class="searching-field">
                 <input type="search" name="search" placeholder="Что ищем?">
               </label>
             </form>
@@ -43,20 +46,20 @@
           <li class="login">Вход
             <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
 
-              <label class="login-form__email">
+              <label class="login-form-email">
                 <span class="visually-hidden">Электронная почта</span>
                 <input type="email" placeholder="Электронная почта">
               </label>
 
-              <label class="login-form__password">
+              <label class="login-form-password">
                 <span class="visually-hidden">Пароль</span>
                 <input type="password" placeholder="Пароль">
               </label>
 
               <button class="button"  type="submit">Войти </button>
-              <div class="login-form__restore">
-                <a class="login-form__link" href="#">Забыли пароль?</a>
-                <a class="login-form__link" href="#">Новая регистрация</a>
+              <div class="login-form-restore">
+                <a class="login-form-link" href="#">Забыли пароль?</a>
+                <a class="login-form-link" href="#">Новая регистрация</a>
               </div>
             </form>
           </li>
@@ -81,7 +84,7 @@
                 </tr>
               </table>
 
-              <span class="basket__finalprice">Итого:750 руб.</span>
+              <span class="basket-finalprice">Итого:750 руб.</span>
 
               <button class="button"  type="submit">Оформить заказ</button>
             </div>
@@ -113,63 +116,63 @@
 
         <div class="filter-cost">
           <span class="filter-option">Цена: 100 руб. - 500 руб.</span>
-          <div class="filter-cost__range">
+          <div class="filter-cost-range">
             <div class="filter-line"></div>
-            <div class="filter-cursor__min"></div>
-            <div class="filter-cursor__min"></div>
+            <div class="filter-cursor-min"></div>
+            <div class="filter-cursor-min"></div>
           </div>
         </div>
 
         <fieldset class="fat">
-          <legend class="fat-filter__title">Жирность:</legend>
+          <legend class="fat-filter-title">Жирность:</legend>
 
           <label class="fat-filter">
-            <input class="fat-filter__input" type="radio" name="fieldradio">
-            <span class="fat-filter__text">0 %</span>
+            <input class="fat-filter-input" type="radio" name="fieldradio">
+            <span class="fat-filter-text">0 %</span>
           </label>
 
           <label class="fat-filter">
-            <input class="fat-filter__input" type="radio" name="fieldradio" checked>
-            <span class="fat-filter__text">до 10 %</span>
+            <input class="fat-filter-input" type="radio" name="fieldradio" checked>
+            <span class="fat-filter-text">до 10 %</span>
           </label>
 
           <label class="fat-filter">
-            <input class="fat-filter__input" type="radio" name="fieldradio">
-            <span class="fat-filter__text">до 30 %</span>
+            <input class="fat-filter-input" type="radio" name="fieldradio">
+            <span class="fat-filter-text">до 30 %</span>
           </label>
 
           <label class="fat-filter">
-            <input class="fat-filter__input" type="radio" name="fieldradio">
-            <span class="fat-filter__text">выше 30 %</span>
+            <input class="fat-filter-input" type="radio" name="fieldradio">
+            <span class="fat-filter-text">выше 30 %</span>
           </label>
         </fieldset>
 
         <fieldset class="filter-additions">
-          <legend class="filter-additions__title">Наполнители:</legend>
+          <legend class="filter-additions-title">Наполнители:</legend>
 
           <label class="additions-checkbox">
-            <input class="additions-checkbox__input" type="checkbox" name="chocolate" checked>
-            <span class="additions-checkbox__text">шоколадные</span>
+            <input class="additions-checkbox-input" type="checkbox" name="chocolate" checked>
+            <span class="additions-checkbox-text">шоколадные</span>
           </label>
 
           <label class="additions-checkbox">
-            <input class="additions-checkbox__input" type="checkbox" name="sugar" checked>
-            <span class="additions-checkbox__text">сахарные присыпки</span>
+            <input class="additions-checkbox-input" type="checkbox" name="sugar" checked>
+            <span class="additions-checkbox-text">сахарные присыпки</span>
           </label>
 
           <label class="additions-checkbox">
-            <input class="additions-checkbox__input" type="checkbox" name="fruit">
-            <span class="additions-checkbox__text">фрукты</span>
+            <input class="additions-checkbox-input" type="checkbox" name="fruit">
+            <span class="additions-checkbox-text">фрукты</span>
           </label>
 
           <label class="additions-checkbox">
-            <input class="additions-checkbox__input" type="checkbox" name="syrup">
-            <span class="additions-checkbox__text">сиропы</span>
+            <input class="additions-checkbox-input" type="checkbox" name="syrup">
+            <span class="additions-checkbox-text">сиропы</span>
           </label>
 
           <label class="additions-checkbox">
-            <input class="additions-checkbox__input" type="checkbox" name="jam">
-            <span class="additions-checkbox__text">джемы</span>
+            <input class="additions-checkbox-input" type="checkbox" name="jam">
+            <span class="additions-checkbox-text">джемы</span>
           </label>
         </fieldset>
 
@@ -359,6 +362,7 @@
             </div>
           </li>
         </ul>
+      </section>
 
         <ul class="pagination-list">
           <li class="pagination-item"><a href="#">&lt;</a></li>
@@ -369,7 +373,7 @@
           <li class="pagination-item"><a href="#">5</a></li>
           <li class="pagination-item"><a href="#">&gt;</a></li>
         </ul>
-      </section>
+
     </main>
 
     <footer class="main-footer">

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -15,23 +18,23 @@
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
               <ul class="catalog-submenu">
-                <li class="submenu-item submenu-item-title__new"><a href="catalog-new-items.html">Новинки</a></li>
-                <li class="submenu-item"><a href="catalog-creamy.html">Сливочное</a></li>
-                <li class="submenu-item"><a href="catalog-sherbet.html">Щербеты</a></li>
-                <li class="submenu-item"><a href="catalog-fruitice.html">Фруктовый лед</a></li>
-                <li class="submenu-item"><a href="catalog-melorin.html">Мелорин</a></li>
+                <li class="submenu-item submenu-item-title"><a href="catalog-new-items.html">Новинки</a></li>
+                <li class="submenu-item"><a href="#">Сливочное</a></li>
+                <li class="submenu-item"><a href="#">Щербеты</a></li>
+                <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                <li class="submenu-item"><a href="#">Мелорин</a></li>
               </ul>
           </li>
-          <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
-          <li><a href="about-company.html">О Компании</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
         </ul>
       </nav>
 
       <div class="user-navigation">
         <div class="searching">
-          <button class="searching__button"></button>
-          <form class="saerching__form" action="/echo" method="post">
-            <label class="searching__field">
+          <button class="searching-button"></button>
+          <form class="saerching-form" action="/echo" method="post">
+            <label class="searching-field">
               <input type="search" name="search" placeholder="Что ищем?">
             </label>
           </form>
@@ -42,24 +45,24 @@
           <li class="login">Вход
             <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
 
-              <label class="login-form__email">
+              <label class="login-form-email">
                 <span class="visually-hidden">Электронная почта</span>
                 <input type="email" placeholder="Электронная почта">
               </label>
 
-              <label class="login-form__password">
+              <label class="login-form-password">
                 <span class="visually-hidden">Пароль</span>
                 <input type="password" placeholder="Пароль">
               </label>
 
               <button class="button"  type="submit">Войти</button>
-              <div class="login-form__restore">
-                <a class="login-form__link" href="#">Забыли пароль?</a>
-                <a class="login-form__link" href="#">Новая регистрация</a>
+              <div class="login-form-restore">
+                <a class="login-form-link" href="#">Забыли пароль?</a>
+                <a class="login-form-link" href="#">Новая регистрация</a>
               </div>
             </form>
           </li>
-          <li class="basket">Пусто</li>
+          <li class="basket-empty">Пусто</li>
         </ul>
       </div>
     </header>
@@ -72,17 +75,17 @@
       <section class="description">
         <p class="shop-description"> Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
-        <ul>
-          <li class="description-text description-equipment">Все наше мороженое изготавливается на собственном производстве,
+        <ul class="description-text">
+          <li class="description-equipment">Все наше мороженое изготавливается на собственном производстве,
             с использованием современного оборудования и проверенных временем технологий.</li>
 
-          <li class="description-text description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+          <li class="description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
               с которыми нас связывает долговременное сотрудничество.</li>
 
-          <li class="description-text description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+          <li class="description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
             Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
 
-          <li class="description-text description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+          <li class="description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
             который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
@@ -95,11 +98,11 @@
         </article>
 
         <section class="subscription">
-          <p class="subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+          <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
             что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-          <form class="subscription__form" action="http://echo.htmlacademy.ru" method="post">
-            <label class="subscription__email">
+          <form class="subscription-form" action="http://echo.htmlacademy.ru" method="post">
+            <label class="subscription-email">
               <span class="visually-hidden">Электронная почта</span>
               <input type="email" placeholder="Электронная почта">
             </label>
@@ -111,20 +114,22 @@
 
       <section class="contacts">
         <div class="map">
-          <img class="location-indicator" src="img/indicator.png" alt="Наше месторасположение" width="218" height="142">
+          <img class="location-indicator" src="img/map+.png" alt="Наше месторасположение" width="1200" height="430">
         </div>
 
         <div class="contacts-field">
-          <p class="contacts-field__address">Адрес главного офиса<br>
+          <p class="contacts-field-address">Адрес главного офиса<br>
             и офлайн-магазина:<br>
-            <span class="contacts-field__address_bold">ул. Большая Конюшенная<br>
-               19/8, Санкт-Петербург</span>
+            <span class="contacts-field-address_bold">ул. Большая Конюшенная<br>
+               19/8, Санкт-Петербург</span><br>
 
             Для заказов по телефону:<br>
-            <a class="contact-phone" href="tel:88124502525">8 812 450-25-25</a>
+            <a class="contact-phone" href="tel:88124502525">8 812 450-25-25</a><br>
             (с 10 до 20 ежедневно)
           </p>
-          <a href="#" class="feedback">Форма обратной связи</a>
+          <div  class="feedback">
+            <a href="#">Форма обратной связи</a>
+          </div>
         </div>
       </section>
     </main>
@@ -139,8 +144,8 @@
 
               <ul class="footer-menu">
                 <li class="footer-menu-item"><a class="for-suppliers" href="#" active>Для поставщиков</a></li>
-                <li class="footer-menu-item"><a class="production" href="#"></a>О производстве</li>
-                <li class="footer-menu-item"><a class="documents" href="#"></a>Наши документы</li>
+                <li class="footer-menu-item"><a class="production" href="#">О производстве</a></li>
+                <li class="footer-menu-item"><a class="documents" href="#">Наши документы</a></li>
                 <li class="footer-menu-item"><a class="standarts" href="#">Экологические стандарты</a></li>
               </ul>
 
@@ -153,22 +158,22 @@
 
 
               <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
-                <fieldset class="feedback-form__fieldset">
-                  <legend class="feedback-form__legend">Мы обязательно вам ответим!</legend>
+                <fieldset class="feedback-form-fieldset">
+                  <legend class="feedback-form-legend">Мы обязательно вам ответим!</legend>
 
                   <label class="feedback-username">
                     <span class="visually-hidden">Имя</span>
-                    <input class="feedback-username__input" type="text" placeholder="Как вас зовут?">
+                    <input class="feedback-username-input" type="text" placeholder="Как вас зовут?">
                   </label>
 
                   <label class="feedback-usermail">
                     <span class="visually-hidden">email:</span>
-                    <input class="feedback-usermail__input" type="email" placeholder="Ваша почта для ответа?">
+                    <input class="feedback-usermail-input" type="email" placeholder="Ваша почта для ответа?">
                   </label>
 
                   <label class="feedback-text">
                     <span class="visually-hidden">Текст обращения</span>
-                    <textarea class="feedback-text__input" name="comment" id="comment-field" rows="10">Напишите что-нибудь</textarea>
+                    <textarea class="feedback-text-input" name="comment" id="comment-field" rows="10">Напишите что-нибудь</textarea>
                   </label>
                 </fieldset>
 
