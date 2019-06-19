@@ -3,66 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="header">
+      <div class="main-header">
 
-      <a class="main-logo">
-        <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
-      </a>
+        <a class="main-logo">
+          <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
+        </a>
 
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a>
-            <ul class="catalog-submenu">
-              <li class="submenu-item submenu-item-title"><a href="#">Новинки</a></li>
-              <li class="submenu-item"><a href="#">Сливочное</a></li>
-              <li class="submenu-item"><a href="#">Щербеты</a></li>
-              <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
-              <li class="submenu-item"><a href="#">Мелорин</a></li>
-            </ul>
-          </li>
-          <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
-          <li><a href="about-company.html">О Компании</a></li>
-        </ul>
-      </nav>
+
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="catalog.html">Каталог</a>
+                  <ul class="catalog-submenu">
+                    <li class="submenu-item submenu-item-title"><a href="catalog-new-items.html">Новинки</a></li>
+                    <li class="submenu-item"><a href="#">Сливочное</a></li>
+                    <li class="submenu-item"><a href="#">Щербеты</a></li>
+                    <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                    <li class="submenu-item"><a href="#">Мелорин</a></li>
+                  </ul>
+            </li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="#">Доставка и оплата</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="#">О Компании</a></li>
+          </ul>
+        </nav>
 
       <div class="user-navigation">
 
-        <div class="user-navigation">
-          <div class="searching">
-            <button class="searching-button"></button>
-            <form class="saerching-form" action="/echo" method="post">
-              <label class="searching-field">
-                <input type="search" name="search" placeholder="Что ищем?">
-              </label>
-            </form>
-          </div>
+        <a class="searching-button" href="#"></a>
+          <form class="searching-form" action="/echo" method="post">
+            <label class="searching-field">
+              <input type="search" name="search" placeholder="Что ищем?">
+            </label>
+          </form>
 
-        <ul class="user-nav">
-          <li class="login">Вход
-            <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+          <ul class="user-nav">
+            <li class="user-nav-item login"><a class="login-link" href="#">Вход</a>
+              <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
 
-              <label class="login-form-email">
-                <span class="visually-hidden">Электронная почта</span>
-                <input type="email" placeholder="Электронная почта">
-              </label>
+                <label class="login-form-email">
+                  <span class="visually-hidden">Электронная почта</span>
+                  <input type="email" placeholder="Электронная почта">
+                </label>
 
-              <label class="login-form-password">
-                <span class="visually-hidden">Пароль</span>
-                <input type="password" placeholder="Пароль">
-              </label>
+                <label class="login-form-password">
+                  <span class="visually-hidden">Пароль</span>
+                  <input type="password" placeholder="Пароль">
+                </label>
 
-              <button class="button"  type="submit">Войти </button>
-              <div class="login-form-restore">
-                <a class="login-form-link" href="#">Забыли пароль?</a>
-                <a class="login-form-link" href="#">Новая регистрация</a>
-              </div>
-            </form>
-          </li>
+                <button class="button"  type="submit">Войти</button>
+                <div class="login-form-restore">
+                  <a class="login-form-link" href="#">Забыли пароль?</a>
+                  <a class="login-form-link" href="#">Новая регистрация</a>
+                </div>
+              </form>
+            </li>
 
           <li class="basket"><a href="#">2 товара</a>
             <div class="basket-non-empty">

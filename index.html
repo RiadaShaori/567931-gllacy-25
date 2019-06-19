@@ -3,46 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
 
-      <a class="main-logo">
-        <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
-      </a>
+    <input class="toggle toggle-1" type="radio" id="slide-1" name="slider" checked="checked" />
+    <input class="toggle toggle-2" type="radio" id="slide-2" name="slider" />
+    <input class="toggle toggle-3" type="radio" id="slide-3" name="slider" />
 
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a>
-              <ul class="catalog-submenu">
-                <li class="submenu-item submenu-item-title"><a href="catalog-new-items.html">Новинки</a></li>
-                <li class="submenu-item"><a href="#">Сливочное</a></li>
-                <li class="submenu-item"><a href="#">Щербеты</a></li>
-                <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
-                <li class="submenu-item"><a href="#">Мелорин</a></li>
-              </ul>
-          </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О Компании</a></li>
-        </ul>
-      </nav>
+    <div class="page-wrap">
+
+    <header class="header">
+      <div class="main-header">
+
+        <a class="main-logo">
+          <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
+        </a>
+
+
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="catalog.html">Каталог</a>
+                  <ul class="catalog-submenu">
+                    <li class="submenu-item submenu-item-title"><a href="catalog-new-items.html">Новинки</a></li>
+                    <li class="submenu-item"><a href="#">Сливочное</a></li>
+                    <li class="submenu-item"><a href="#">Щербеты</a></li>
+                    <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                    <li class="submenu-item"><a href="#">Мелорин</a></li>
+                  </ul>
+            </li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="#">Доставка и оплата</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="#">О Компании</a></li>
+          </ul>
+        </nav>
+
 
       <div class="user-navigation">
-        <div class="searching">
-          <button class="searching-button"></button>
-          <form class="saerching-form" action="/echo" method="post">
-            <label class="searching-field">
-              <input type="search" name="search" placeholder="Что ищем?">
-            </label>
-          </form>
-        </div>
+
+
+            <a class="searching-button" href="#"></a>
+              <form class="searching-form" action="/echo" method="post">
+                <label class="searching-field">
+                  <input type="search" name="search" placeholder="Что ищем?">
+                </label>
+              </form>
 
 
         <ul class="user-nav">
-          <li class="login">Вход
+          <li class="user-nav-item login"><a class="login-link" href="#">Вход</a>
             <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
 
               <label class="login-form-email">
@@ -62,9 +73,28 @@
               </div>
             </form>
           </li>
-          <li class="basket-empty">Пусто</li>
+
+          <li class="user-nav-item basket-empty"><a class="basket-link" href="#">Пусто</a></li>
         </ul>
       </div>
+      </div>
+
+      <div class="slider">
+          <div class="slide slide-1"><p>Крем-брюле и пломбир с малиновым джемом</p></div>
+          <div class="slide slide-2"><p>Шоколадный пломбир и лимонный сорбет </p></div>
+          <div class="slide slide-3"><p>Пломбир с помадкой и клубничный щербет</p></div>
+
+          <div class="slider-wrap">
+            <div class="slider-control">
+              <label class="slider-toggle slider-toggle-1" for="promo-slide-1" tabindex="0"></label>
+              <label class="slider-toggle slider-toggle-2" for="promo-slide-2" tabindex="0"></label>
+              <label class="slider-toggle slider-toggle-3" for="promo-slide-3" tabindex="0"></label>
+            </div>
+            <button class="button" type="button">Давайте оба!</button>
+          </div>
+        </div>
+
+
     </header>
 
     <main class="main-container">
@@ -94,7 +124,7 @@
         <article class="new-in-blog">
           <h2 class="blog-news">Новое в нашем блоге</h2>
 
-          <a href="#" class="table-setting">10 способов сервировки фруктовых щербетов к столу</a>
+          <a href="#" class="blog-link">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
 
         <section class="subscription">
@@ -128,7 +158,7 @@
             (с 10 до 20 ежедневно)
           </p>
           <div  class="feedback">
-            <a href="#">Форма обратной связи</a>
+            <a class="button" href="#">Форма обратной связи</a>
           </div>
         </div>
       </section>
@@ -155,7 +185,7 @@
                   <span>Сделано в <a class="developer" href="https://htmlacademy.ru">HTML Academy</a></span> <!--не знаю как поставить знак "copyright"-->2019
               </div>
             </footer>
-
+          </div>
 
               <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
                 <fieldset class="feedback-form-fieldset">
