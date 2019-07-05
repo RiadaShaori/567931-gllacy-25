@@ -7,24 +7,24 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
 
-    <input class="toggle toggle-1" type="radio" id="slide-1" name="slider" checked="checked" />
-    <input class="toggle toggle-2" type="radio" id="slide-2" name="slider" />
-    <input class="toggle toggle-3" type="radio" id="slide-3" name="slider" />
+    <input class="toggle toggle-1" type="radio" id="promo-slide-1" name="promo-slider" checked="checked"></input>
+    <input class="toggle toggle-2" type="radio" id="promo-slide-2" name="promo-slider"></input>
+    <input class="toggle toggle-3" type="radio" id="promo-slide-3" name="promo-slider"></input>
 
     <div class="page-wrap">
 
     <header class="header">
-      <div class="main-header">
+
+      <nav class="main-navigation container">
 
         <a class="main-logo">
           <img src="img/main-logo.svg" width="154" height="64" alt="Логотип «Глейси»">
         </a>
 
-
-        <nav class="main-navigation">
-          <ul class="site-navigation">
+          <ul class="site-navigation ">
             <li class="site-navigation-item">
               <a class="site-navigation-link" href="catalog.html">Каталог</a>
                   <ul class="catalog-submenu">
@@ -38,46 +38,46 @@
             <li class="site-navigation-item"><a class="site-navigation-link" href="#">Доставка и оплата</a></li>
             <li class="site-navigation-item"><a class="site-navigation-link" href="#">О Компании</a></li>
           </ul>
-        </nav>
 
 
-      <div class="user-navigation">
 
+          <div class="user-navigation">
 
-            <a class="searching-button" href="#"></a>
-              <form class="searching-form" action="/echo" method="post">
-                <label class="searching-field">
-                  <input type="search" name="search" placeholder="Что ищем?">
-                </label>
-              </form>
+            <ul class="user-nav">
 
+              <li class="searching"><a class="searching-button" href="#"></a>
+                  <form class="searching-form" action="/echo" method="post">
+                    <label class="searching-field">
+                      <input type="search" name="search" placeholder="Что ищем?">
+                    </label>
+                  </form>
+              </li>
 
-        <ul class="user-nav">
-          <li class="user-nav-item login"><a class="login-link" href="#">Вход</a>
-            <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+              <li class="user-nav-item login"><a class="login-link" href="#">Вход</a>
+                <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
 
-              <label class="login-form-email">
-                <span class="visually-hidden">Электронная почта</span>
-                <input type="email" placeholder="Электронная почта">
-              </label>
+                  <label class="login-form-email">
+                    <span class="visually-hidden">Электронная почта</span>
+                    <input type="email" placeholder="Электронная почта">
+                  </label>
 
-              <label class="login-form-password">
-                <span class="visually-hidden">Пароль</span>
-                <input type="password" placeholder="Пароль">
-              </label>
+                  <label class="login-form-password">
+                    <span class="visually-hidden">Пароль</span>
+                    <input type="password" placeholder="Пароль">
+                  </label>
 
-              <button class="button"  type="submit">Войти</button>
-              <div class="login-form-restore">
-                <a class="login-form-link" href="#">Забыли пароль?</a>
-                <a class="login-form-link" href="#">Новая регистрация</a>
-              </div>
-            </form>
-          </li>
+                  <button class="button"  type="submit">Войти</button>
+                  <div class="login-form-restore">
+                    <a class="login-form-link" href="#">Забыли пароль?</a>
+                    <a class="login-form-link" href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </li>
 
-          <li class="user-nav-item basket-empty"><a class="basket-link" href="#">Пусто</a></li>
-        </ul>
-      </div>
-      </div>
+              <li class="user-nav-item basket-empty"><a class="basket-link" href="#">Пусто</a></li>
+            </ul>
+          </div>
+      </nav>
 
       <div class="slider">
           <div class="slide slide-1"><p>Крем-брюле и пломбир с малиновым джемом</p></div>
@@ -98,7 +98,25 @@
     </header>
 
     <main class="main-container">
+
+      <div class="promotional-offers container">
+
+        <section class="raspberries">
+          <h2>Малинка даром!</h2>
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+
+          <button class="button" type="button">Хочу варенье!</button>
+        </section>
+
+        <section class="chocolate">
+          <h2>Шоколадки даром!</h2>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+
+          <button class="button" type="button">Хочу шоколадки!</button>
+        </section>
+      </div>
       <!--Отсутствуют блоки, которые будут интегрированы позже, согласно заданию-->
+    <div class="main-block">
 
       <h1 class="visually-hidden">«Gllacy-Shop»</h1>
 
@@ -106,16 +124,16 @@
         <p class="shop-description"> Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
         <ul class="description-text">
-          <li class="description-equipment">Все наше мороженое изготавливается на собственном производстве,
+          <li class="description-text-item description-equipment">Все наше мороженое изготавливается на собственном производстве,
             с использованием современного оборудования и проверенных временем технологий.</li>
 
-          <li class="description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+          <li class="description-text-item description-cooperation">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
               с которыми нас связывает долговременное сотрудничество.</li>
 
-          <li class="description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+          <li class="description-text-item description-products">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
             Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
 
-          <li class="description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+          <li class="description-text-item description-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
             который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
@@ -141,7 +159,7 @@
           </form>
         </section>
       </div>
-
+    </div>
       <section class="contacts">
         <div class="map">
           <img class="location-indicator" src="img/map+.png" alt="Наше месторасположение" width="1200" height="430">
@@ -165,24 +183,26 @@
     </main>
 
             <footer class="main-footer">
-              <ul class="social">
-                  <li class="social-icon"><a class="social-link icon-twitter" href="#" aria-label="Твитер"></a></li>
-                  <li class="social-icon"><a class="social-link icon-instagram" href="#" aria-label="Инстаграм"></a></li>
-                  <li class="social-icon"><a class="social-link icon-facebook" href="#" aria-label="Фейсбук"></a></li>
-                  <li class="social-icon"><a class="social-link icon-vkontakte" href="#" aria-label="Вконтакте"></a></li>
-              </ul>
+              <div class="container">
+                <ul class="social">
+                    <li class="social-icon icon-twitter"><a href="#" aria-label="Твитер"></a></li>
+                    <li class="social-icon icon-instagram"><a href="#" aria-label="Инстаграм"></a></li>
+                    <li class="social-icon icon-facebook"><a href="#" aria-label="Фейсбук"></a></li>
+                    <li class="social-icon icon-vkontakte"><a href="#" aria-label="Вконтакте"></a></li>
+                </ul>
 
-              <ul class="footer-menu">
-                <li class="footer-menu-item"><a class="for-suppliers" href="#" active>Для поставщиков</a></li>
-                <li class="footer-menu-item"><a class="production" href="#">О производстве</a></li>
-                <li class="footer-menu-item"><a class="documents" href="#">Наши документы</a></li>
-                <li class="footer-menu-item"><a class="standarts" href="#">Экологические стандарты</a></li>
-              </ul>
+                <ul class="footer-menu">
+                  <li class="footer-menu-item for-suppliers"><a href="#" active>Для поставщиков</a></li>
+                  <li class="footer-menu-item production"><a href="#">О производстве</a></li>
+                  <li class="footer-menu-item documents"><a href="#">Наши документы</a></li>
+                  <li class="footer-menu-item standarts"><a href="#">Экологические стандарты</a></li>
+                </ul>
 
-              <div class="development">
-                <img src="img/htmlacademy-logo.svg" alt="Логотип HTML-Academy" width="114" height="39">
+                <div class="development">
+                  <img src="img/htmlacademy-logo.svg" alt="Логотип HTML-Academy" width="114" height="39">
 
-                  <span>Сделано в <a class="developer" href="https://htmlacademy.ru">HTML Academy</a></span> <!--не знаю как поставить знак "copyright"-->2019
+                    <span>Сделано в <a class="developer" href="https://htmlacademy.ru">HTML Academy</a></span> <!--не знаю как поставить знак "copyright"-->2019
+                </div>
               </div>
             </footer>
           </div>
